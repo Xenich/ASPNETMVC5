@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Покупка книги";
+}
+
+<div>
+    <h3>Форма оформления покупки</h3>
+    <form method="post">
+        <input type="hidden" value="@ViewBag.BookId" name="BookId" />        @* аттрибуты BookId , Person, Address соответствуют полям
+                                                                                класса Purchase - благодаря этому происходит связывание набора
+                                                                                данных в экземпляр класса Purchase в методе   public string Buy(Purchase purchase)    в контроллере*@
+        <table>
+            <tr>
+                <td><p>Введите своё имя</p></td>
+                <td><input type="text" name="Person" /> </td>
+            </tr>
+            <tr>
+                <td><p>Введите адрес</p></td>
+                <td><input type="text" name="Address" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="Отправить" /> </td>
+            </tr>
+        </table>
+    </form>
+
+
+</div>
+
