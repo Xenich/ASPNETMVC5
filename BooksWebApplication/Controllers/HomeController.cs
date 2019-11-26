@@ -27,8 +27,8 @@ namespace BooksWebApplication.Controllers
             return View();      // представление для метода Buy, для создания - ПКМ по View->Add View 
         }
 
-        [HttpPost]      // данный атрибут указывает, что этот метод будет обрабатывать post-запросы
-        public string Buy(Purchase purchase) // после того, как покупатель оформил покупку, метод возвращает string!!!
+        [HttpPost]      // данный атрибут указывает, что этот метод будет обрабатывать post-запросы из представления Buy.cshtml
+        public string Buy(Purchase purchase) // после того, как покупатель оформил покупку, метод возвращает string
         {
             purchase.Date = DateTime.Now;
                 // добавляем инфу о покупке в базу данных
@@ -37,6 +37,7 @@ namespace BooksWebApplication.Controllers
             return "Спасибо, " + purchase.Person + ", за покупку!";
         }
 
+        // в браузере мы можем вызвать этот метод так: http://localhost:7832/Home/Hello     Home - это контроллер, Hello - этот метод
         public string Hello() // после того, как покупатель оформил покупку, метод возвращает string!!!
         {
             return "Hello World!";

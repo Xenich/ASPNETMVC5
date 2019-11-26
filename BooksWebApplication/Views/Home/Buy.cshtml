@@ -6,7 +6,7 @@
 <div>
     <h3>Форма оформления покупки</h3>
     <form method="post">
-        <input type="hidden" value="@ViewBag.BookId" name="BookId" />        @* аттрибуты BookId , Person, Address соответствуют полям
+        <input type="hidden" value="@ViewBag.BookId" name="BookId" />        @* аттрибуты name= BookId , Person, Address соответствуют полям
                                                                                 класса Purchase - благодаря этому происходит связывание набора
                                                                                 данных в экземпляр класса Purchase в методе   public string Buy(Purchase purchase)    в контроллере*@
         <table>
@@ -23,7 +23,5 @@
             </tr>
         </table>
     </form>
-
-
 </div>
 
